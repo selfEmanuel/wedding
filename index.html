@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Save the Date · 11.09.2027</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;1,9..144,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+  :root{
+    --paper:#FAF6EF;
+    --ink:#211D1B;
+    --wine:#6B2737;
+    --sage:#6F7856;
+    --gold:#B79556;
+    --gold-soft:#B7955633;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#1B1714;
+      --ink:#EFE8DD;
+      --wine:#D98A9B;
+      --sage:#A8B48F;
+      --gold:#D8BC85;
+      --gold-soft:#D8BC8540;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Work Sans", ui-sans-serif, system-ui, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    min-height:100vh;
+  }
+  .card{
+    width:100%;
+    max-width:560px;
+    border:1px solid var(--gold-soft);
+    padding:clamp(32px, 8vw, 64px) clamp(20px, 6vw, 48px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:clamp(18px, 4vw, 28px);
+  }
+  .eyebrow{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--sage);
+  }
+  .rule{
+    width:56px;
+    height:1px;
+    background:var(--gold);
+  }
+  .date{
+    font-family:"Fraunces", ui-serif, Georgia, serif;
+    font-optical-sizing:auto;
+    font-weight:340;
+    font-size:clamp(44px, 12vw, 76px);
+    line-height:1;
+    letter-spacing:0.01em;
+    font-variant-numeric:tabular-nums;
+  }
+  h1{
+    margin:0;
+    font-family:"Fraunces", ui-serif, Georgia, serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(22px, 5vw, 30px);
+    color:var(--wine);
+  }
+  p{
+    margin:0;
+    max-width:38ch;
+    font-size:15px;
+    line-height:1.65;
+    opacity:0.82;
+  }
+  .domain{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    color:var(--sage);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Save&nbsp;the&nbsp;Date</div>
+    <div class="date">-- · -- · 2027</div>
+    <div class="rule"></div>
+    <h1>Wir heiraten.</h1>
+    <p>Ablauf, Anreise, Unterkunft und alles Weitere folgen in Kürze an dieser Stelle.</p>
+    <div class="domain">hochzeit.zeilinger.pro</div>
+  </div>
+</body>
+</html>
