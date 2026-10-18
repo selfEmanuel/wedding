@@ -212,7 +212,7 @@
     <p class="lead"><strong>Wir heiraten!</strong> Bitte haltet euch diesen Tag für uns frei.</p>
 
     <div class="cal">
-      <a class="btn" href="hochzeit-daniela-emanuel.ics">
+      <a class="btn" id="cal-btn" href="hochzeit-daniela-emanuel.ics">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
         In den Kalender
       </a>
@@ -249,6 +249,21 @@
   }
   tick();
   timer = setInterval(tick, 1000);
+})();
+</script>
+<script>
+(function () {
+  // Android: Google Kalender oeffnet .ics-Dateien oft nicht, daher dort direkt der Google-Kalender-Termin.
+  // Alle anderen Geraete (iPhone, Mac, Windows/Outlook) bekommen die .ics-Datei.
+  if (!/Android/i.test(navigator.userAgent)) return;
+  var btn = document.getElementById('cal-btn');
+  btn.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent('Hochzeit Daniela & Emanuel')
+    + '&dates=20270911/20270912'
+    + '&location=' + encodeURIComponent('Kienbauerhof, Pisdorf 7, 4671 Aichkirchen')
+    + '&details=' + encodeURIComponent('https://hochzeit.zeilinger.pro');
+  btn.target = '_blank';
+  btn.rel = 'noopener';
 })();
 </script>
 </body>
