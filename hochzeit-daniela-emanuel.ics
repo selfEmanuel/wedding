@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Daniela und Emanuel//Hochzeit//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hochzeit-20270911@hochzeit.zeilinger.pro
+DTSTAMP:20261018T120000Z
+DTSTART;VALUE=DATE:20270911
+DTEND;VALUE=DATE:20270912
+SUMMARY:Hochzeit Daniela & Emanuel
+LOCATION:Kienbauerhof\, Pisdorf 7\, 4671 Aichkirchen
+DESCRIPTION:Save the Date. Alle Infos: https://hochzeit.zeilinger.pro
+URL:https://hochzeit.zeilinger.pro
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

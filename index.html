@@ -1,104 +1,264 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Save the Date · --.--.2027</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;1,9..144,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F6EAD7">
+<title>Save the Date · Daniela &amp; Emanuel · 11.09.2027</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hochzeit.zeilinger.pro/">
+<meta property="og:title" content="Save the Date · Daniela &amp; Emanuel">
+<meta property="og:description" content="Wir heiraten am 11. September 2027 am Kienbauerhof in Aichkirchen bei Wels.">
+<meta property="og:image" content="https://hochzeit.zeilinger.pro/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_AT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Daniela &amp; Emanuel heiraten am 11. September 2027 am Kienbauerhof in Aichkirchen bei Wels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
 <style>
-  :root{
-    --paper:#FAF6EF;
-    --ink:#211D1B;
-    --wine:#6B2737;
-    --sage:#6F7856;
-    --gold:#B79556;
-    --gold-soft:#B7955633;
+  /* Layout: one sheet of cream paper; two hand-drawn sprays grow in from opposite corners, the text sits centred between them. Single committed light look (no dark mode, by decision). */
+  :root {
+    --paper: #F6EAD7;
+    --paper-deep: #EFDFC8;
+    --ink: #2A1F24;
+    --ink-soft: #6B585F;
+    --berry: #8E3B66;
+    --berry-deep: #6A2A4B;
+    --magenta: #C2255C;
+    --smoke-text: #4F6A80;
+    --script: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
+    --body: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --line: #D9BFB8;
+    --spray: clamp(170px, 42vw, 460px);
   }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --paper:#1B1714;
-      --ink:#EFE8DD;
-      --wine:#D98A9B;
-      --sage:#A8B48F;
-      --gold:#D8BC85;
-      --gold-soft:#D8BC8540;
-    }
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    /* faint paper grain */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .3 0 0 0 0 .25 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
-  *{box-sizing:border-box;}
-  html,body{height:100%;margin:0;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"Work Sans", ui-sans-serif, system-ui, sans-serif;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
-    min-height:100vh;
+  .sheet {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding-block: calc(var(--spray) * 0.44) calc(var(--spray) * 0.44);
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
-  .card{
-    width:100%;
-    max-width:560px;
-    border:1px solid var(--gold-soft);
-    padding:clamp(32px, 8vw, 64px) clamp(20px, 6vw, 48px);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:clamp(18px, 4vw, 28px);
+  .spray {
+    position: absolute;
+    width: var(--spray);
+    height: var(--spray);
+    pointer-events: none;
+    user-select: none;
   }
-  .eyebrow{
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:0.28em;
-    text-transform:uppercase;
-    color:var(--sage);
+  .spray.tl { top: 0; left: 0; }
+  .spray.br { right: 0; bottom: 0; }
+  main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 34rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 28px;
   }
-  .rule{
-    width:56px;
-    height:1px;
-    background:var(--gold);
+  .head { display: grid; justify-items: center; gap: 14px; }
+  .eyebrow {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .3em;
+    padding-left: .3em;
+    text-transform: uppercase;
+    color: var(--smoke-text);
   }
-  .date{
-    font-family:"Fraunces", ui-serif, Georgia, serif;
-    font-optical-sizing:auto;
-    font-weight:340;
-    font-size:clamp(44px, 12vw, 76px);
-    line-height:1;
-    letter-spacing:0.01em;
-    font-variant-numeric:tabular-nums;
+  h1 {
+    margin: 0;
+    font-family: var(--script);
+    font-weight: 400;
+    font-size: clamp(54px, 13.5vw, 96px);
+    line-height: 1.1;
+    padding-block: .05em;
+    color: var(--berry);
+    text-wrap: balance;
   }
-  h1{
-    margin:0;
-    font-family:"Fraunces", ui-serif, Georgia, serif;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(22px, 5vw, 30px);
-    color:var(--wine);
+  h1 { display: grid; justify-items: center; }
+  h1 .n { display: block; }
+  h1 .amp { display: block; font-size: .62em; line-height: .9; color: var(--magenta); margin-block: -.08em -.02em; }
+  .date {
+    margin: 0;
+    font-weight: 300;
+    font-size: clamp(22px, 5vw, 30px);
+    letter-spacing: .12em;
+    line-height: 1.2;
   }
-  p{
-    margin:0;
-    max-width:38ch;
-    font-size:15px;
-    line-height:1.65;
-    opacity:0.82;
+  .rule { width: 48px; height: 1px; background: var(--berry); opacity: .55; }
+  .place {
+    font-weight: 300;
+    font-size: clamp(18px, 4vw, 21px);
+    letter-spacing: .02em;
+    line-height: 1.35;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--berry) 45%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
   }
-  .domain{
-    font-family:"IBM Plex Mono", ui-monospace, monospace;
-    font-size:12px;
-    letter-spacing:0.04em;
-    color:var(--sage);
+  .place:hover { color: var(--berry); text-decoration-color: var(--berry); }
+  .place small { display: block; margin-top: 4px; font-size: 13px; letter-spacing: .04em; color: var(--ink-soft); text-decoration: none; }
+  .lead { margin: 0; font-size: clamp(17px, 3.8vw, 19px); max-width: 30ch; }
+  .lead strong { font-weight: 500; color: var(--berry-deep); }
+  .cal { display: grid; justify-items: center; gap: 10px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border-radius: 999px;
+    background: var(--berry);
+    color: var(--paper);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .04em;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .btn svg { width: 18px; height: 18px; }
+  .btn:hover { background: var(--magenta); }
+  .btn:active { transform: translateY(1px); }
+  .alt { font-size: 14px; color: var(--ink-soft); }
+  .alt a { color: var(--ink-soft); text-underline-offset: 3px; }
+  .alt a:hover { color: var(--berry); }
+  a:focus-visible { outline: 2px solid var(--magenta); outline-offset: 4px; border-radius: 4px; }
+  .stay {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0;
+    padding: 16px 20px;
+    background: color-mix(in srgb, var(--paper-deep) 88%, transparent);
+    border-radius: 3px;
+    font-size: 15px;
+    line-height: 1.55;
+    text-align: left;
+  }
+  .stay b {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--berry);
+  }
+  .countdown { display: flex; justify-content: center; margin: 0; padding: 0; list-style: none; }
+  .countdown li { width: 72px; position: relative; }
+  .countdown li + li::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
+  .countdown .num { display: block; font-size: clamp(24px, 6vw, 30px); font-weight: 300; line-height: 1.25; font-variant-numeric: tabular-nums; color: var(--berry-deep); }
+  .countdown .unit { display: block; margin-top: 2px; font-size: 12px; letter-spacing: .12em; color: var(--ink-soft); }
+  .countdown-done { margin: 0; font-size: 19px; color: var(--berry); }
+  @media (min-width: 900px) { .countdown li { width: 88px; } }
+  .site { font-size: 12px; letter-spacing: .08em; color: var(--ink-soft); }
+  @media (min-width: 900px) {
+    :root { --spray: clamp(340px, 34vw, 500px); }
+    .sheet { padding-block: 64px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .spray { animation: settle 1.4s cubic-bezier(.2,.7,.2,1) both; }
+    .spray.br { animation-delay: .12s; }
+    @keyframes settle { from { transform: scale(.97); } to { transform: none; } }
+    .spray.tl { transform-origin: 0 0; }
+    .spray.br { transform-origin: 100% 100%; }
   }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="eyebrow">Save&nbsp;the&nbsp;Date</div>
-    <div class="date">-- · -- · 2027</div>
-    <div class="rule"></div>
-    <h1>Wir heiraten.</h1>
-    <p>Ablauf, Anreise, Unterkunft und alles Weitere folgen in Kürze an dieser Stelle.</p>
-    <div class="domain">hochzeit.zeilinger.pro</div>
-  </div>
+<div class="sheet">
+  <img class="spray tl" src="flora/arr-tl.svg" alt="">
+  <img class="spray br" src="flora/arr-br.svg" alt="">
+
+  <main>
+    <div class="head">
+      <div class="eyebrow">Save the Date</div>
+      <h1><span class="n">Daniela</span> <span class="amp">&amp;</span> <span class="n">Emanuel</span></h1>
+    </div>
+
+    <p class="date"><time datetime="2027-09-11">11. September 2027</time></p>
+
+    <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Kienbauerhof%2C%20Pisdorf%207%2C%204671%20Aichkirchen" target="_blank" rel="noopener">
+      Kienbauerhof, Aichkirchen bei Wels
+      <small>Auf Google Maps ansehen</small>
+    </a>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <ul class="countdown" id="countdown" aria-label="Countdown bis zum 11. September 2027">
+      <li><span class="num" id="cd-d">–</span><span class="unit">Tage</span></li>
+      <li><span class="num" id="cd-h">–</span><span class="unit">Std</span></li>
+      <li><span class="num" id="cd-m">–</span><span class="unit">Min</span></li>
+      <li><span class="num" id="cd-s">–</span><span class="unit">Sek</span></li>
+    </ul>
+
+    <p class="lead"><strong>Wir heiraten!</strong> Bitte haltet euch diesen Tag für uns frei.</p>
+
+    <div class="cal">
+      <a class="btn" href="hochzeit-daniela-emanuel.ics">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+        In den Kalender
+      </a>
+      <span class="alt">oder in den <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Hochzeit%20Daniela%20%26%20Emanuel&amp;dates=20270911%2F20270912&amp;location=Kienbauerhof%2C%20Pisdorf%207%2C%204671%20Aichkirchen&amp;details=hochzeit.zeilinger.pro" target="_blank" rel="noopener">Google Kalender</a></span>
+    </div>
+
+    <p class="stay"><b>Unterkunft</b>Ihr kommt von weiter her? Hotels gibt es in Wels, Lambach und Grieskirchen. Bucht am besten früh.</p>
+
+    <div class="site">hochzeit.zeilinger.pro</div>
+  </main>
+</div>
+
+<script>
+(function () {
+  // 11. September 2027, 00:00 Uhr in Wien (Sommerzeit UTC+2) = 10.09.2027 22:00 UTC
+  var TARGET = Date.UTC(2027, 8, 10, 22, 0, 0);
+  var list = document.getElementById('countdown');
+  var el = { d: document.getElementById('cd-d'), h: document.getElementById('cd-h'),
+             m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
+  function two(n) { return n < 10 ? '0' + n : String(n); }
+  var timer;
+  function tick() {
+    var rest = TARGET - Date.now();
+    if (rest <= 0) {
+      var p = document.createElement('p');
+      p.className = 'countdown-done';
+      p.textContent = 'Heute ist es so weit.';
+      list.replaceWith(p);
+      clearInterval(timer);
+      return;
+    }
+    var s = Math.floor(rest / 1000);
+    el.d.textContent = Math.floor(s / 86400);
+    el.h.textContent = two(Math.floor((s % 86400) / 3600));
+    el.m.textContent = two(Math.floor((s % 3600) / 60));
+    el.s.textContent = two(s % 60);
+  }
+  tick();
+  timer = setInterval(tick, 1000);
+})();
+</script>
 </body>
 </html>
