@@ -110,7 +110,6 @@
     letter-spacing: .12em;
     line-height: 1.2;
   }
-  .rule { width: 48px; height: 1px; background: var(--berry); opacity: .55; }
   .place {
     font-weight: 300;
     font-size: clamp(18px, 4vw, 21px);
@@ -164,7 +163,7 @@
     text-transform: uppercase;
     color: var(--berry);
   }
-  .countdown { display: flex; justify-content: center; margin: 0; padding: 0; list-style: none; }
+  .countdown { display: flex; justify-content: center; margin: 14px 0 0; padding: 0; list-style: none; }
   .countdown li { width: 72px; position: relative; }
   .countdown li + li::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
   .countdown .num { display: block; font-size: clamp(24px, 6vw, 30px); font-weight: 300; line-height: 1.25; font-variant-numeric: tabular-nums; color: var(--berry-deep); }
@@ -200,8 +199,6 @@
     <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Kienbauerhof%2C%20Pisdorf%207%2C%204671%20Aichkirchen" target="_blank" rel="noopener">
       Kienbauerhof, Aichkirchen bei Wels
     </a>
-
-    <div class="rule" aria-hidden="true"></div>
 
     <ul class="countdown" id="countdown" aria-label="Countdown bis zum 11. September 2027">
       <li><span class="num" id="cd-d">–</span><span class="unit">Tage</span></li>
