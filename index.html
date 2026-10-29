@@ -180,6 +180,26 @@
     text-transform: uppercase;
     color: var(--rauchblau);
   }
+  .stay p { margin: 0; }
+  .stay-list { margin: 10px 0 0; padding: 0; list-style: none; }
+  .stay-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 7px 0;
+    border-top: 1px solid var(--rose-50);
+  }
+  .stay-list a {
+    color: var(--beere);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    text-decoration: underline;
+    text-decoration-color: var(--rose-50);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+  .stay-list a:hover { text-decoration-color: var(--beere); }
 
   /* Breite Bildschirme: Ecken sitzen weit vom Text weg, weniger Abstand oben/unten nötig */
   @media (min-width: 900px) {
@@ -237,7 +257,14 @@
       In den Kalender
     </a>
 
-    <p class="stay"><b>Unterkunft</b>Ihr kommt von weiter her? Hotels gibt es in Wels, Lambach und Grieskirchen. Bucht am besten früh.</p>
+    <section class="stay" aria-labelledby="stay-h">
+      <b id="stay-h">Unterkunft</b>
+      <p>Ihr kommt von weiter her? In Offenhausen, nur wenige Minuten entfernt, gibt es zwei Pensionen. Reserviert am besten früh, am einfachsten telefonisch.</p>
+      <ul class="stay-list">
+        <li><span>Pension Kinzl</span><a href="tel:+436645609086">0664 560 90 86</a></li>
+        <li><span>Pension Thünauer</span><a href="tel:+4372476142">07247 61 42</a></li>
+      </ul>
+    </section>
   </main>
 </div>
 
